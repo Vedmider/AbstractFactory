@@ -15,9 +15,10 @@ public class Movie {
         this.movieTitle = movieTitle;
     }
 
-    public void play(){
+    public boolean play(){
         subtitle.playSubtitle(movieTitle);
         track.playTrack(movieTitle);
+        return true;
     }
 
     public void changeContext(ContextFactory context){
@@ -27,5 +28,13 @@ public class Movie {
 
     public String getMovieTitle() {
         return movieTitle;
+    }
+
+    public Track getTrack() {
+        return track;
+    }
+
+    public Subtitle getSubtitle() {
+        return subtitle;
     }
 }
